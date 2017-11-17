@@ -1,0 +1,31 @@
+# Base
+*.sqlite3
+.DS_Store
+.idea
+__pycache__
+node_modules
+.vscode
+*.pyc
+dpenv/
+
+#Heroku needs the migration files to run manage.py migrate
+# Migrations
+**/migrations/*
+**/migrations/__init__.py
+
+#Media
+*.jpeg
+.png
+
+#Local Settings
+local.py
+setup.bat
+
+#Local webpack files
+webpack-stats.json
+webpack_bundles
+
+*.log
+npm-debug.*.*
+helpfile.txt
+htmlcov/.coverage
