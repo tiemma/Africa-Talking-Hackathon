@@ -1,11 +1,7 @@
 import os
 from django.core.wsgi import get_wsgi_application
 
-import sys
-
-sys.path.append('..') 
-
-from config.environment import SETTINGS_MODULE
+import config.environment.local as  SETTINGS_MODULE
 from whitenoise.django import DjangoWhiteNoise
 
 
