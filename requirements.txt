@@ -2,13 +2,10 @@ certifi==2017.11.5
 chardet==3.0.4
 coreapi==2.3.0
 coreschema==0.0.4
-dj-database-url==0.4.2
 Django==1.11.4
 django-cors-headers==2.0.2
 django-debug-toolbar==1.8
-django-taggit==0.22.1
 djangorestframework==3.6.3
-gunicorn==19.7.1
 idna==2.6
 itypes==1.1.0
 Jinja2==2.10
@@ -16,11 +13,9 @@ Markdown==2.6.8
 MarkupSafe==1.0
 olefile==0.44
 Pillow==4.1.1
-psycopg2==2.7.3.2
 Pygments==2.2.0
 pytz==2017.3
 requests==2.18.4
 sqlparse==0.2.4
 uritemplate==3.0.0
 urllib3==1.22
-whitenoise==3.3.1
