@@ -15,6 +15,6 @@ class TopicView(generics.ListCreateAPIView):
     filter_backends = (SearchFilter, OrderingFilter)
     search_fields = ('name', 'tags')
 
-class TopicDetailView(generics.RetrieveUpdateDestroyAPIView):
+class TopicDetailView(generics.RetrieveUpdateAPIView):
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
