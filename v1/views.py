@@ -3,8 +3,8 @@ from django.shortcuts import HttpResponse
 from rest_framework import generics
 from rest_framework.filters import SearchFilter, OrderingFilter
 
-from .models import Topic, Stage, Task, Article
-from .serializers import BasicTopicSerializer, TopicSerializer, StageSerializer
+from .models import Topic, Task, Article
+from .serializers import BasicTopicSerializer, TopicSerializer
 
 def index(request):
     return HttpResponse(content=b'Hello world')

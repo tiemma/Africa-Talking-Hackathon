@@ -14,14 +14,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'config',
+
     # Requirements
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
+    'taggit',
 
     # API (v1)
     'v1',
-
 ]
 
 ALLOWED_HOSTS = []
