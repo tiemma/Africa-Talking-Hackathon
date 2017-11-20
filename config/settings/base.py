@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
+    'taggit',
 
     # API (v1)
     'v1',
