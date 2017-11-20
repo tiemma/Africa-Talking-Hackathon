@@ -14,6 +14,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'config',
+
     # Requirements
     'corsheaders',
     'rest_framework',
@@ -22,7 +24,6 @@ INSTALLED_APPS = [
 
     # API (v1)
     'v1',
-
 ]
 
 ALLOWED_HOSTS = []
