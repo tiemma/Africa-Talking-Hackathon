@@ -13,7 +13,7 @@ class TopicView(generics.ListCreateAPIView):
     queryset = Topic.objects.all()
     serializer_class = BasicTopicSerializer
     filter_backends = (SearchFilter, OrderingFilter)
-    search_fields = ('name', 'tags')
+    search_fields = ('name',)
 
 class TopicDetailView(generics.RetrieveUpdateAPIView):
     queryset = Topic.objects.all()
