@@ -4,7 +4,7 @@ from taggit.managers import TaggableManager
 class Topic(models.Model):
     name = models.CharField(max_length=150, blank=True)
     description = models.TextField()
-    tags = TaggableManager()
+    tags = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
