@@ -10,8 +10,8 @@ dpenv/
 
 #Heroku needs the migration files to run manage.py migrate
 # Migrations
-**/migrations/*
-**/migrations/__init__.py
+#**/migrations/*
+#**/migrations/__init__.py
 
 #Media
 *.jpeg
