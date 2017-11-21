@@ -2,6 +2,17 @@ from rest_framework import serializers
 
 from .models import Topic,  Task, Article
 
+class TagListSerializer(serializers.Field):
+    def to_internal_value(self, data):
+        if type(data) is not list:
+            raise ParseError("expected a list of data")
+        return data
+
+    def to_representation(self, obj):
+        if type(obj) is not list:
+            return [tag.name for tag in obj.all()]
+        return obj
+
 class TaskSerializer(serializers.Serializer):
 
     class Meta:
@@ -16,6 +27,8 @@ class ArticleSerializer(serializers.Serializer):
 
 
 class BasicTopicSerializer(serializers.ModelSerializer):
+
+    tags = TagListSerializer()
     class Meta:
         model = Topic
         fields = ('pk', 'name', 'description', 'tags', 'articles', 'tasks')
@@ -24,8 +37,10 @@ class BasicTopicSerializer(serializers.ModelSerializer):
 
 class TopicSerializer(serializers.ModelSerializer):
     
+    tags = TagListSerializer()
+
     class Meta:
         model = Topic
-        fields = ('pk', 'name', 'description', 'articles', 'tags', 'tasks')
+        fields = ('pk', 'name', 'description', 'articles', 'tags', 'tasks')        
         depth = 1
         read_only_fields = ('pk', )
