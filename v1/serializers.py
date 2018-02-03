@@ -29,14 +29,17 @@ class ArticleSerializer(serializers.Serializer):
 class BasicTopicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Topic
-        fields = ('pk', 'name', 'description', 'tags', 'articles', 'tasks', 'twitter_username', 'github_username')
+        fields = ('pk', 'name', 'description', 'tags', 'articles', 'tasks')
         read_only_fields = ('pk', )
         extra_kwargs = { "articles" : {"write_only" : True}, "tasks" : {"write_only" : True} }        
 
 class TopicSerializer(serializers.ModelSerializer):
     
+    articles = ArticleSerializer(many=True)
+    tasks = TaskSerializer(many=True)
+    
     class Meta:
         model = Topic
-        fields = ('pk', 'name', 'description', 'articles', 'tags', 'tasks', 'twitter_username', 'github_username')
+        fields = ('pk', 'name', 'description', 'articles', 'tags', 'tasks')
         depth = 1
         read_only_fields = ('pk', )

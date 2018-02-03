@@ -5,8 +5,6 @@ class Topic(models.Model):
     name = models.CharField(max_length=150, blank=True)
     description = models.TextField()
     tags = models.TextField(blank=True)
-    twitter_username = models.CharField(max_length=150, blank=True)
-    github_username = models.CharField(max_length=150, blank=True)
 
     def __str__(self):
         return self.name
