@@ -28,4 +28,3 @@ This will create an initial superuser account with the following credentials:
 ```
 admin@email.com
 pass1234
-```
