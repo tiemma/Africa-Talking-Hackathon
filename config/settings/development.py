@@ -7,7 +7,7 @@ DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS += ['devpath-bot.herokuapp.com']
+ALLOWED_HOSTS += ['devpath-bot.herokuapp.com', 'team12.herokuapp.com']
 
 INSTALLED_APPS.append('debug_toolbar')
 
